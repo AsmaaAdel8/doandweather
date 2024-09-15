@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.check {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.imgHeader {
+  width: 150px;
+  margin: auto;
+}
+
+.body {
+  background-color: #7B5C90;
+  color: rgb(255, 255, 255);
+  width: 40%;
+  text-align: center;
+  height: 100vh;
+  border-radius: 20%;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 15px 15px 20px #A583A4 !important;
+}
+
+.list {
+  list-style: "❤️";
+  margin:0 20px;
+  cursor: pointer;
+}
+
+.decory {
+  margin-left: 29px;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.inpotTask {
+  width: 60%;
+  border: 0;
+  text-align: center;
+  border-radius: 15%;
+  background-color: #E9B9A9;
+  word-wrap: break-word;
+}
+
+.button {
+  background-color: #E9B9A9;
+}/*# sourceMappingURL=App.module.css.map */
