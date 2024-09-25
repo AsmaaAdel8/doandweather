@@ -10,7 +10,9 @@ import { useContext } from "react";
 import { ColorModeContext } from "./Theme";
 import { useTheme } from "@mui/material";
 import { MdOutlineLightMode, MdNightlight } from "react-icons/md";
+
 import Sign from "./Sign";
+import { deepPurple } from "@mui/material/colors";
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -24,9 +26,12 @@ export default function Header() {
   const handleClose = () => {
     setOpen(false);
   };
+const userEmail=localStorage.getItem('email');
 
   const handleClickOpen = () => {
-    setOpen(true);
+    if(!userEmail){
+      setOpen(true);
+    }
   };
 
   return (
@@ -69,7 +74,7 @@ export default function Header() {
             </IconButton>
           )}
           <IconButton onClick={handleClickOpen}>
-            <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+            {userEmail?<Avatar sx={{ bgcolor: deepPurple[500] }}>{userEmail.slice(0,2)}</Avatar>:<Avatar alt="Cindy Baker" src="" />}
           </IconButton>
         </Toolbar>
       </AppBar>

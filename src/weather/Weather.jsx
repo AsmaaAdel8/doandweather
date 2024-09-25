@@ -23,7 +23,6 @@ const Weather = () => {
   useEffect(() => {
     getWeather();
     document.title="Weather-app";
-    document.head=`<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />`;
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Query, units]);
 
